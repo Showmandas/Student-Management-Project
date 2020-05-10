@@ -27,8 +27,13 @@
   <section class="col">
       @include('stdlist')
   </section>
-  <section class="col">
-  <form action="{{url('/store')}}" method="POST">
+  <section class="col-md-5">
+  <div class="card mb-3">
+  <img src="https://cdn.pixabay.com/photo/2019/07/15/09/21/learn-4338932__340.jpg" class="card-img-top" alt="...">
+  <div class="card-body">
+    
+    <p class="card-text">Enter Student's Information.</p>
+    <form action="{{url('/store')}}" method="POST">
   @csrf
   <div class="form-group">
     <label>CNE</label>
@@ -61,6 +66,9 @@
   </div>
   
 </form>
+  
+  </div>
+  </div>
   </section>
   </div>
   </div>
@@ -81,7 +89,7 @@
       
   </section>
   <section class="col-md-7 mt-4">
-  <form action="{{url('/store')}}" method="POST">
+  <form action="{{url('/update/'.$student->id)}}" method="POST">
   @csrf
   <div class="form-group">
     <label>CNE</label>
